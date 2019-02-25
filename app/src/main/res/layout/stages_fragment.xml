@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorAccent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/crystal_shrine_stage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:elevation="5dp"
+            android:layout_marginTop="87dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="30dp"
+            android:src="@drawable/svc_crystal_shrine" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/factory_abandoned_stage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:cropToPadding="false"
+            android:elevation="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="30dp"
+            android:src="@drawable/svc_factory_abandoned" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/green_of_forest_stage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:elevation="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="30dp"
+            android:src="@drawable/svc_green_of_forest" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/nude_place_stage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:elevation="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="30dp"
+            android:src="@drawable/svc_nude_place" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/power_generation_stage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:elevation="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="30dp"
+            android:src="@drawable/svc_power_generation_room" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/station_obsolete_stage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:elevation="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="30dp"
+            android:src="@drawable/svc_station_obsolete" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/blockade_space_stage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:elevation="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="30dp"
+            android:src="@drawable/svc_blockade_space" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/gd_temple_stage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:elevation="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="30dp"
+            android:src="@drawable/svc_gd_temple" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/maniac_world_stage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:elevation="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="30dp"
+            android:src="@drawable/svc_maniac_world" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/athenas_hw_stage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:elevation="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="30dp"
+            android:src="@drawable/svc_athenas_hw" />
+
+    </LinearLayout>
+
+</ScrollView>
