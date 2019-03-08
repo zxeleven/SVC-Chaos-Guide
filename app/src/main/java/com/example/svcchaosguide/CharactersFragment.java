@@ -38,25 +38,19 @@ public class CharactersFragment extends Fragment implements View.OnClickListener
 
     @Override
     public void onClick(View v) {
-        if(v.getId() == R.id.snk_chars_button){
-            FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-            fragmentTransaction.setCustomAnimations(R.anim.fade_in, R.anim.fade_out,
-                    R.anim.fade_in, R.anim.fade_out);
+        fragmentTransaction.setCustomAnimations(R.anim.fade_in, R.anim.fade_out,
+                R.anim.fade_in, R.anim.fade_out);
+        if(v.getId() == R.id.snk_chars_button){
             fragmentTransaction.replace(R.id.container, new SNKFragment());
-            fragmentTransaction.addToBackStack(null);
-            fragmentTransaction.commit();
         }
         else if(v.getId() == R.id.capcom_chars_button){
-            FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
-            fragmentTransaction.setCustomAnimations(R.anim.fade_in, R.anim.fade_out,
-                    R.anim.fade_in, R.anim.fade_out);
             fragmentTransaction.replace(R.id.container, new CapcomFragment());
-            fragmentTransaction.addToBackStack(null);
-            fragmentTransaction.commit();
         }
+        ((MainActivity) getActivity()).clickedNavItem = 0;
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 }

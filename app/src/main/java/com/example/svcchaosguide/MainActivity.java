@@ -2,7 +2,9 @@ package com.example.svcchaosguide;
 
 import android.graphics.Color;
 import android.os.Build;
+import android.os.Handler;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
@@ -26,7 +28,10 @@ public class MainActivity extends AppCompatActivity
     private Toolbar toolbar;
     private DrawerLayout drawer;
     private NavigationView navigationView;
+
     TextView textViewTitle;
+    Fragment new_fragment;
+    int clickedNavItem = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +40,6 @@ public class MainActivity extends AppCompatActivity
 
         toolbar = findViewById(R.id.toolbar);
         drawer = findViewById(R.id.drawer_layout);
-        BlurSupport.addTo(drawer);
         navigationView = findViewById(R.id.nav_view);
         textViewTitle = findViewById(R.id.toolbar_title);
 
@@ -70,34 +74,34 @@ public class MainActivity extends AppCompatActivity
 
     @SuppressWarnings("StatementWithEmptyBody")
     public boolean onNavigationItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-        fragmentTransaction.setCustomAnimations(R.anim.fade_in, R.anim.fade_out,
-                R.anim.fade_in, R.anim.fade_out);
-
-        if (id == R.id.htp) {
-            fragmentTransaction.replace(R.id.container, new HTPFragment());
-            fragmentTransaction.commit();
+        if ((item.getItemId() != clickedNavItem)) {
+            switch (item.getItemId()) {
+                case R.id.htp:
+                    clickedNavItem = R.id.htp;
+                    new_fragment = new HTPFragment();
+                    break;
+                case R.id.chars:
+                    clickedNavItem = R.id.chars;
+                    new_fragment = new CharactersFragment();
+                    break;
+                case R.id.stage:
+                    clickedNavItem = R.id.stage;
+                    new_fragment = new StagesFragment();
+                    break;
+            }
+            drawer.closeDrawer(GravityCompat.START);
+            return true;
         }
-        else if (id == R.id.chars){
-            fragmentTransaction.replace(R.id.container, new CharactersFragment());
-            fragmentTransaction.commit();
-        }
-        else if (id == R.id.stage) {
-            fragmentTransaction.replace(R.id.container, new StagesFragment());
-            fragmentTransaction.commit();
-        }
-
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 
     private void initView() {
-        toolbar.setBackgroundColor(Color.rgb(35, 35, 35));
+        BlurSupport.addTo(drawer);
+
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("");
+        toolbar.setTitle("");
 
         drawer.addDrawerListener(new DrawerLayout.SimpleDrawerListener() {
             @Override
@@ -106,11 +110,20 @@ public class MainActivity extends AppCompatActivity
             }
             @Override
             public void onDrawerClosed(View drawerView) {
-                supportInvalidateOptionsMenu();
+                switch (clickedNavItem) {
+                    case 0:
+                        break;
+                    default:
+                        getSupportFragmentManager().beginTransaction()
+                                .setCustomAnimations(R.anim.fade_in, R.anim.fade_out, R.anim.fade_in, R.anim.fade_out)
+                                .replace(R.id.container, new_fragment)
+                                .commit();
+
+                }
             }
         });
 
-        drawer.setScrimColor(ContextCompat.getColor(this, R.color.bg_glass));
+        drawer.setScrimColor(Color.TRANSPARENT);
 
         setSupportActionBar(toolbar);
         navigationView.setNavigationItemSelectedListener(this);

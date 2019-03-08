@@ -1,12 +1,13 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
+    <style name="MyAppTheme" parent="@style/AppTheme" />
 
     <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="android:windowBackground">@drawable/background</item>
@@ -18,9 +19,9 @@
 
     <!-- ToolBar -->
     <style name="ToolBarStyle" parent="Theme.AppCompat">
-        <item name="android:textColorPrimary">@color/greyText</item>
-        <item name="android:textColorSecondary">@color/greyText</item>
-        <item name="actionMenuTextColor">@color/greyText</item>
+        <item name="android:textColorPrimary">@color/primaryTextColor</item>
+        <item name="android:textColorSecondary">@color/primaryTextColor</item>
+        <item name="actionMenuTextColor">@color/primaryTextColor</item>
     </style>
 
     <style name="AppTheme.NoActionBar">

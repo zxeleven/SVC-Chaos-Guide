@@ -8,19 +8,20 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingRight="8dp"
+        android:paddingLeft="8dp"
+        android:paddingBottom="8dp"
+        android:clipToPadding="false">
 
         <pl.droidsonroids.gif.GifImageView
             android:id="@+id/crystal_shrine_stage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
+            android:src="@drawable/svc_crystal_shrine"
             android:elevation="5dp"
-            android:layout_marginTop="87dp"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:paddingBottom="30dp"
-            android:src="@drawable/svc_crystal_shrine" />
+            android:paddingTop="8dp" />
 
         <pl.droidsonroids.gif.GifImageView
             android:id="@+id/factory_abandoned_stage"
@@ -29,9 +30,7 @@
             android:adjustViewBounds="true"
             android:cropToPadding="false"
             android:elevation="5dp"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:paddingBottom="30dp"
+            android:paddingTop="8dp"
             android:src="@drawable/svc_factory_abandoned" />
 
         <pl.droidsonroids.gif.GifImageView
@@ -40,9 +39,7 @@
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:elevation="5dp"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:paddingBottom="30dp"
+            android:paddingTop="8dp"
             android:src="@drawable/svc_green_of_forest" />
 
         <pl.droidsonroids.gif.GifImageView
@@ -51,9 +48,7 @@
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:elevation="5dp"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:paddingBottom="30dp"
+            android:paddingTop="8dp"
             android:src="@drawable/svc_nude_place" />
 
         <pl.droidsonroids.gif.GifImageView
@@ -62,9 +57,7 @@
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:elevation="5dp"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:paddingBottom="30dp"
+            android:paddingTop="8dp"
             android:src="@drawable/svc_power_generation_room" />
 
         <pl.droidsonroids.gif.GifImageView
@@ -73,9 +66,7 @@
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:elevation="5dp"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:paddingBottom="30dp"
+            android:paddingTop="8dp"
             android:src="@drawable/svc_station_obsolete" />
 
         <pl.droidsonroids.gif.GifImageView
@@ -84,9 +75,7 @@
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:elevation="5dp"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:paddingBottom="30dp"
+            android:paddingTop="8dp"
             android:src="@drawable/svc_blockade_space" />
 
         <pl.droidsonroids.gif.GifImageView
@@ -95,9 +84,7 @@
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:elevation="5dp"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:paddingBottom="30dp"
+            android:paddingTop="8dp"
             android:src="@drawable/svc_gd_temple" />
 
         <pl.droidsonroids.gif.GifImageView
@@ -106,9 +93,7 @@
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:elevation="5dp"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:paddingBottom="30dp"
+            android:paddingTop="8dp"
             android:src="@drawable/svc_maniac_world" />
 
         <pl.droidsonroids.gif.GifImageView
@@ -117,9 +102,7 @@
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:elevation="5dp"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:paddingBottom="30dp"
+            android:paddingTop="8dp"
             android:src="@drawable/svc_athenas_hw" />
 
     </LinearLayout>
