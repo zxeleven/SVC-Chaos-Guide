@@ -100,7 +100,7 @@ public class SNKFragment extends Fragment implements CharacterAdapter.OnCharList
                 new Character(
                         R.drawable.genjyuro_name,
                         R.drawable.genjyuro_small_port,
-                        R.drawable.kyo_bg));
+                        R.drawable.genjyuro_bg));
 
         charList.add(
                 new Character(
@@ -112,37 +112,37 @@ public class SNKFragment extends Fragment implements CharacterAdapter.OnCharList
                 new Character(
                         R.drawable.geese_name,
                         R.drawable.geese_small_port,
-                        R.drawable.earthquake_bg));
+                        R.drawable.geese_bg));
 
         charList.add(
                 new Character(
                         R.drawable.goenitz_name,
                         R.drawable.goenitz_small_port,
-                        R.drawable.earthquake_bg));
+                        R.drawable.goenitz_bg));
 
         charList.add(
                 new Character(
                         R.drawable.oiori_name,
                         R.drawable.oiori_small_port,
-                        R.drawable.earthquake_bg));
+                        R.drawable.oiori_bg));
 
         charList.add(
                 new Character(
                         R.drawable.mars_name,
                         R.drawable.mars_small_port,
-                        R.drawable.earthquake_bg));
+                        R.drawable.mars_bg));
 
         charList.add(
                 new Character(
                         R.drawable.serious_karate_name,
                         R.drawable.serious_karate_small_port,
-                        R.drawable.earthquake_bg));
+                        R.drawable.serious_karate_bg));
 
         charList.add(
                 new Character(
                         R.drawable.athena_name,
                         R.drawable.athena_small_port,
-                        R.drawable.earthquake_bg));
+                        R.drawable.athena_bg));
 
         adapter = new CharacterAdapter(getActivity(), charList, this);
         recyclerView.setAdapter(adapter);
