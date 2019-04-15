@@ -8,5 +8,6 @@ public class KyoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.kyo_activity);
     }
 }
